@@ -1,0 +1,46 @@
+image: node:16
+
+pipelines:
+  pull-requests:
+    "**":
+      - step:
+          caches:
+            - nodemodules
+          script:
+            - cd app
+            - yarn
+            - yarn build:production
+  tags:
+    deploy-to-test-*:
+      - step:
+          name: Build for staging
+          deployment: staging
+          caches:
+            - nodemodules
+          script:
+            - cd app
+            - yarn
+            - yarn build:staging
+          artifacts:
+            - app/dist/**
+      - step:
+          name: Build Docker image and push to Dockerhub
+          script:
+            - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+            - docker build -t $DOCKER_HUB_USER/$DOCKER_IMAGE:latest .
+            - docker push $DOCKER_HUB_USER/$DOCKER_IMAGE:latest
+      - step:
+          name: Deploy to staging
+          script:
+            - pipe: atlassian/ssh-run:0.4.1
+              variables:
+                SSH_USER: $SSH_USER
+                SERVER: $STAGING_IP
+                MODE: "script"
+                COMMAND: "deploy_to_staging.sh"
+
+definitions:
+  caches:
+    nodemodules: ./app/node_modules
+options:
+  docker: true

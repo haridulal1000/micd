@@ -1,0 +1,99 @@
+@mixin icon-mixin($url){
+display: block;
+background-image: url($url);
+height: 24px;
+width: 24px;
+background-size: contain;
+background-position: 0;
+background-repeat: no-repeat
+}
+.profile-icon{
+    @include icon-mixin('../src/assets/icons/profile-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+.history-icon{
+    @include icon-mixin('../src/assets/icons/history-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+.search-icon{
+    @include icon-mixin('../src/assets/icons/search-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+.problem-box-icon{
+    @include icon-mixin('../src/assets/icons/problem-box-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+.case-library-icon{
+    @include icon-mixin('../src/assets/icons/case-library-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+.dropdown-icon{
+    @include icon-mixin('../src/assets/icons/dropdown-icon.svg');
+    height: 10px;
+    width: 15px;
+}
+.info-icon{
+    @include icon-mixin('../src/assets/icons/info-icon.svg');
+    height: 14px;
+    width: 14px;
+}
+.checked-square-icon{
+    @include icon-mixin('../src/assets/icons/checked-square-icon.svg');
+    height: 20px;
+    width: 20px;
+}
+.unchecked-square-icon{
+    @include icon-mixin('../src/assets/icons/unchecked-square-icon.svg');
+    height: 20px;
+    width: 20px;
+}
+.down-arrow-icon{
+    @include icon-mixin('../src/assets/icons/down-arrow-icon.svg');
+    height: 14px;
+    width: 14px;
+}
+.cross-icon{
+    @include icon-mixin('../src/assets/icons/cross-icon.svg');
+    height: 14px;
+    width: 14px;
+}
+.small-add-icon{
+    @include icon-mixin('../src/assets/icons/add-icon.svg');
+    height: 14px;
+    width: 14px;
+}
+.three-dots-icon{
+    @include icon-mixin('../src/assets/icons/three-dots.svg');
+    height: 14px;
+    width: 14px;
+}
+.exit-small-icon{
+    @include icon-mixin('../src/assets/icons/exit-small-icon.svg');
+    height: 14px;
+    width: 14px;
+}
+.download-icon{
+    @include icon-mixin('../src/assets/icons/download-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+.delete-small-icon{
+    @include icon-mixin('../src/assets/icons/delete-small-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+.gray-cross-icon{
+    @include icon-mixin('../src/assets/icons/gray-cross.svg');
+    height: 16px;
+    width: 16px;
+}
+.down-arrow-icon-md{
+    @extend .down-arrow-icon;
+    height: 25px;
+    width: 25px;
+}

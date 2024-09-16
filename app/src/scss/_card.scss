@@ -1,0 +1,57 @@
+@import "./variables";
+
+.primary-card {
+	box-shadow: 0px 10px 60px rgba(40, 77, 180, 0.2);
+	border-radius: 20px;
+}
+
+.primary-card-non-rounded {
+	box-shadow: 0px 10px 60px rgba(40, 77, 180, 0.2);
+}
+
+.micd-shadow {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.remark-card {
+	box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+hr{
+	border-color: $color-mid-night;
+	opacity: 0.2;
+}
+.update-profile-card{
+	background: #FFFFFF;
+	box-shadow: 0px 80px 80px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+
+	.gradient-box{
+	background: linear-gradient(90.48deg, #EA3323 0.46%, #275DF3 94.87%);
+	opacity: 0.3;
+	border-radius: 8px 8px 0px 0px;
+	box-shadow: 0px 80px 80px rgba(0, 0, 0, 0.05);
+
+
+	}
+}
+
+.gradient-border {
+	position: relative;
+	padding: 2px;
+	background: linear-gradient(90.48deg, #EA3323 0.46%, #275DF3 94.87%);
+	.content {
+		background: white;
+		padding: 20px;
+		span{
+			background: -webkit-linear-gradient(45deg, #ea3323 0.46%, #275df3 94.87%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+.gradient-border-bottom {
+	@extend .gradient-border;
+	padding: 0 0 4px 0;
+}

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./scss/btn";
+@import "./scss/typo";
+@import "./scss/form";
+@import "./scss/card";
+@import "react-toastify/dist/ReactToastify.css";
+@import "./scss/icons";
+
+// h1 {
+// 	font-size: 3.2em;
+// 	line-height: 1.1;
+// }
+
+.Toastify__toast {
+  padding: 0;
+  padding-right: 8px;
+  padding-top: 8px;
+}
+
+.Toastify__close-button {
+  color: black;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.slick-track {
+  margin-left: unset !important;
+}
+.slick-slider .slick-track{
+  min-width: 100%!important;
+}

@@ -1,0 +1,12 @@
+.profile-header{
+    span{
+        display: block;
+    }
+    a{
+        height: 2rem;
+        color: black;
+    }
+    .active{
+       @apply border-b-4 border-b-primary text-primary
+    }
+}

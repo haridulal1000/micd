@@ -1,0 +1,142 @@
+@import "./variables";
+
+$code-input-width : 70px;
+$code-input-height : 106px;
+
+.micd-input {
+  background: $color-saphire-pale;
+  font-size: 12px;
+  padding-right: 15px;
+  &:focus {
+    outline: solid $color-saphire;
+  }
+
+  input {
+    background: $color-saphire-pale;
+    border: none;
+    outline: none;
+    padding: 15px 0px 15px 15px;
+    @media (min-width: 2000px) {
+      padding: 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+
+.micd-disabled-input {
+  background: $color-lightGray;
+  font-size: 12px;
+  padding-right: 15px;
+  &:focus-within {
+    outline: solid $color-saphire;
+  }
+
+  input {
+    background: $color-lightGray;
+    border: none;
+    outline: none;
+    color: rgb(186, 183, 183);
+    padding: 15px 0px 15px 15px;
+    @media (min-width: 2000px) {
+      padding: 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+.error-input{
+  @extend .micd-input;
+  background: $color-warning-light;
+  border: solid 1px $color-accent;
+  &:focus-within {
+    outline: solid $color-saphire;
+    border: none;
+  }
+  input {
+    background: $color-warning-light;
+  }
+}
+
+input[type="checkbox"] {
+  border-color: $color-micd-gray;
+}
+
+.pill {
+  background: linear-gradient(90.48deg, #ea3323 0.46%, #275df3 94.87%) !important;
+  padding: 2px;
+  border-radius: 6px;
+  max-width: 130px;
+  div {
+    background-color: $color-white;
+    border-radius: 4px;
+    text-align: center;
+    span {
+      background: linear-gradient(90.48deg, #ea3323 0.46%, #275df3 94.87%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      // text-fill-color: transparent;
+    }
+  }
+}
+
+.blue-pill{
+  background: $color-primary-pastel-dream;
+  padding: 6px 20px;
+  border-radius: 100px;
+  width: fit-content;
+  color: $color-saphire;
+}
+
+.micd-select {
+  padding: 0 18px;
+  min-height: 36px;
+
+  background: $color-primary-pastel-dream;
+  border: 1px solid $color-saphire;
+  border-radius: 100px;
+
+  select{
+    outline: none;
+    min-height: inherit;
+    background: transparent;
+    color: $color-saphire;
+
+    padding-right: 10px;
+  }
+}
+
+.code-input {
+  background: linear-gradient(90.48deg, #ea3323 0.46%, #275df3 94.87%);
+  padding: 1px;
+  width: $code-input-width;
+  height: $code-input-height;
+
+  input{
+    width: $code-input-width - 2px;
+    height: $code-input-height - 2px;
+  }
+
+  @media (min-width: 2000px) {
+    width: $code-input-width + 20px;
+    height: $code-input-height + 20px;
+    input{
+      width: $code-input-width + 18px;
+      height: $code-input-height + 18px;
+    }
+  }
+}
+
+.code-input-error {
+  @extend .code-input;
+  background: #ea3323;
+  input{
+    background: #FFF0F0;
+  }
+}
+
+.dropdown-shadow {
+  box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.15);
+}
+

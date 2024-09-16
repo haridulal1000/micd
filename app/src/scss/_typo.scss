@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "variables";
+
+* {
+  * {
+    font-family: "Poppins";
+  }
+}
+
+body {
+  font-size: 16px;
+  color: $color-mid-night;
+  line-height: 20px;
+  @media (min-width: 2000px) {
+    line-height: 28px;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  color: $color-mid-night;
+}
+
+h1,
+.h1 {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 32px;
+  @media (min-width: 2000px) {
+    font-size: 48px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.title-uc {
+  @extend .title;
+  font-size: 14px;
+}
+
+.sub-text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #4E5056;
+}
+
+a {
+  color: lighten($color-primary, 10%);
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: none;
+  }
+  @media (min-width: 2000px) {
+    line-height: 28px;
+  }
+}
+
+label {
+  @media (min-width: 2000px) {
+    font-size: 20px;
+  }
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-medium {
+  font-weight: 400;
+}
+
+.error-text {
+  color: $color-danger;
+}
+
+/* Sizes */
+$font-sizes-px: 12, 14, 16, 18, 20, 24, 28, 32, 36;
+
+@each $font-size-px in $font-sizes-px {
+  .text-size-#{$font-size-px}px {
+    font-size: #{$font-size-px}px;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90.48deg, #EA3323 0.46%, #275DF3 94.87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

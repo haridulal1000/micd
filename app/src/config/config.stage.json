@@ -1,0 +1,25 @@
+{
+	"app": {
+		"name": "micd-web-app",
+		"version": "0.0.1",
+		"releaseStage": "stage"
+	},
+	"enhancers": {
+		"api": {
+			"endpointBase": {
+				"version": "v1",
+				"host": "https://api-test.dentsla.com/api/v1/"
+			},
+			"auth": {
+				"login": "auth/email/register",
+				"register": "/auth/email/login"
+			}
+		},
+		"utility/utility": {}
+	},
+	"modules": {
+		"config": {},
+		"profile": {},
+		"root": {}
+	}
+}

@@ -1,0 +1,33 @@
+@import "variables";
+
+.react-calendar {
+  background-color: #f6fafe !important;
+  border: none !important;
+  font-family: "Poppins";
+
+  .react-calendar__month-view__weekdays {
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-underline-offset: 2rem;
+  }
+
+  .react-calendar__month-view__days__day--weekend:not(
+        .react-calendar__month-view__days__day--neighboringMonth
+      ) {
+       color: black !important;
+  }
+
+
+  .react-calendar__month-view__days__day:not(.react-calendar__month-view__days__day--weekend)
+  + .react-calendar__month-view__days__day--weekend:not(
+    .react-calendar__month-view__days__day--neighboringMonth
+  ) {
+    color: #d10000 !important;
+  }
+
+  .react-calendar__tile--active {
+    background-color: #3161e4 !important;
+    color: #fff !important;
+  }
+
+}

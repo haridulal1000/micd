@@ -1,0 +1,161 @@
+@import "variables";
+
+.primary-btn {
+  background: linear-gradient(90.48deg, #ea3323 0.46%, #275df3 94.87%) !important;
+  border-radius: 100px;
+  color: $color-white;
+
+  &:hover {
+    background: $color-saphire !important;
+    border: none;
+  }
+
+  &:disabled {
+    background: $color-bg-gray !important;
+    border: 1px solid $color-neutral;
+    color: $color-mid-night;
+  }
+}
+
+.primary-btn-lg {
+  @extend .primary-btn;
+  min-width: 270px;
+}
+
+.sidebar-btn {
+  background: linear-gradient(90.48deg, #ea3323 0.46%, #275df3 94.87%) !important;
+  cursor: pointer;
+  min-width: 100%;
+  color: $color-white;
+}
+
+.case-banner-current-step-btn {
+  background: linear-gradient(90.48deg, #ea3323 0.46%, #275df3 94.87%) !important;
+  border-radius: 100px;
+  color: $color-white;
+  padding: 1px 1px 2.11px 1.11px;
+  cursor: pointer;
+
+  div {
+    background: $color-bg-case-banner;
+    color: black;
+    border-radius: 100px;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+.secondary-btn-container {
+  background: linear-gradient(90.48deg, #ea3323 0.46%, #275df3 94.87%) !important;
+  border-radius: 100px;
+  color: $color-white;
+  padding: 2px 1px 2.11px 1.11px;
+  cursor: pointer;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  div {
+    background: white;
+    color: black;
+    border-radius: 100px;
+    padding: 5px;
+    text-align: center;
+    min-height: 38px;
+    width: 99%;
+
+    button{
+      width: max-content;
+    }
+  }
+
+  &:hover {
+    background: $color-saphire !important;
+    div{
+      background: $color-saphire !important;
+      border: none;
+      button {
+        background: -webkit-linear-gradient(45deg, #ffffff 0.46%, #ffffff 94.87%);
+        color: black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+
+  button {
+    background: -webkit-linear-gradient(45deg, #ea3323 0.46%, #275df3 94.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (min-width: 2000px) {
+    button {
+      font-size: 20px;
+    }
+  }
+}
+
+.secondary-btn-container-no-border {
+  @extend .secondary-btn-container;
+  border-radius: 0;
+  padding: 0;
+  background: none !important;
+  div{
+    background: none !important;
+    border-radius: 0;
+    background: $color-bg-gray;
+    width: 100%;
+  }
+  &:hover {
+    background: none !important;
+    div{
+      background: none !important;
+      button {
+        background: -webkit-linear-gradient(45deg, $color-saphire 0.46%, $color-saphire 94.87%);
+        color: black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.active-d-btn {
+  span {
+    p {
+      background: -webkit-linear-gradient(45deg, #ea3323 0.46%, #275df3 94.87%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.border-gradient {
+  position: relative;
+  padding: 20px;
+  /* Set the height and width according to your requirement */
+  width: 200px;
+  height: 200px;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(to right, red, yellow); /* Your gradient colors */
+}
+
+/* This will ensure the content remains on top of the pseudo-element */
+.border-gradient > * {
+  position: relative;
+  z-index: 1;
+}
